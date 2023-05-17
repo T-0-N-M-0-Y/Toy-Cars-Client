@@ -29,7 +29,7 @@ const Navbar = () => {
                         <Link className="mr-4 p-3 font-bold text-sky-800 hover:underline" to={"/"} tabIndex={0}> All Toys
                         </Link>
                         <Link className="mr-4 p-3 font-bold text-sky-800 hover:underline" to={"/"}>My Toys</Link>
-                        <Link className="mr-4 p-3 font-bold text-sky-800" to={"/"}>Add Toys</Link>
+                        <Link className="mr-4 p-3 font-bold text-sky-800 hover:underline" to={"/"}>Add Toys</Link>
                         <Link className="mr- p-3 font-bold text-sky-800 hover:underline" to={"/"}>Blogs</Link>
                     </ul>
                 </div>
