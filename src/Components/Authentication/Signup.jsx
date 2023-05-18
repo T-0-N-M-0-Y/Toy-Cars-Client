@@ -50,25 +50,25 @@ const Signup = () => {
                                     <label className="label">
                                         <span className="label-text">Name</span>
                                     </label>
-                                    <input type="text" name="name" placeholder="name" className="input input-bordered" />
+                                    <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="text" name="email" placeholder="email" className="input input-bordered" />
+                                    <input type="text" name="email" placeholder="Email" className="input input-bordered" required/>
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="text" name="password" placeholder="password" className="input input-bordered" />
+                                    <input type="text" name="password" placeholder="Password" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Photo URL</span>
                                     </label>
-                                    <input type="text" name="photo" placeholder="Photo url" className="input input-bordered" />
+                                    <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" />
                                 </div>
                                 <div className="form-control mt-6">
                                     <input className="text-center text-sky-800 bg-yellow-400 p-3 font-bold rounded-lg hover:bg-red-500" type="submit" value="Sign Up" />

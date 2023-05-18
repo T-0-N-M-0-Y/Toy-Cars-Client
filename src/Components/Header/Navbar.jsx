@@ -5,7 +5,6 @@ import { AuthContext } from "../AuthProviders/AuthProvider";
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
-    console.log(user);
 
     const handleSignOut = () => {
         logOut()
@@ -30,7 +29,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex items-center">
-                        <img className="h-14 w-14" src="https://w7.pngwing.com/pngs/700/802/png-transparent-hot-wheels-model-car-die-cast-toy-hot-wheels-logo-car-smiley.png" alt="" />
+                        <img className="h-16 w-16 rounded-full" src="https://w7.pngwing.com/pngs/700/802/png-transparent-hot-wheels-model-car-die-cast-toy-hot-wheels-logo-car-smiley.png" alt="" />
                         <h1 className="ml-2 text-3xl font-bold text-red-600">Toy <span className="text-yellow-400">Cars</span></h1>
                     </div>
                 </div>
@@ -46,13 +45,15 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {
-                        user ? <Link className="mr-4 bg-yellow-400 p-3 font-bold text-white rounded-lg hover:bg-red-500" to={"/login"}> <button onClick={handleSignOut}>Log out</button></Link>
+                        user ? <Link className="mr-4 bg-yellow-400 p-3 font-bold text-white rounded-lg hover:bg-red-500"> <button onClick={handleSignOut}>Log out</button></Link>
                             :
                             <Link className="mr-4 bg-yellow-400 p-3 font-bold text-white rounded-lg hover:bg-red-500" to={"/login"}> <button>Login</button></Link>
                     }
 
                     {
-                        user ? <img className="h-14 w-14" src={user.photoURL} />
+                        user ? <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
+                            <img className="h-14 w-14 rounded-full" src={user.photoURL} referrerPolicy="no-referrer" />
+                        </div>
                             :
                             <Link className="mr-4 bg-red-600 p-3 font-bold text-white rounded-lg hover:bg-yellow-400" to={"/signup"}> <button>Sign Up</button></Link>
                     }
