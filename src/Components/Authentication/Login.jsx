@@ -11,7 +11,7 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
     const  navigate = useNavigate();
     const location = useLocation();
-    const redirectTo = location?.state?.redirectTo?.pathname || "/";
+    const redirectTo = location?.state?.from?.pathname || "/";
 
     const handleLogInSubmit = event => {
         event.preventDefault();

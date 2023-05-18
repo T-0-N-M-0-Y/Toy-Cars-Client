@@ -21,11 +21,11 @@ const Navbar = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <Link to={"/"}>Home</Link>
-                            <Link to={"/"} tabIndex={0} className="justify-between"> All Toys
+                            <Link to={"/alltoys"} tabIndex={0} className="justify-between"> All Toys
                             </Link>
-                            <Link to={"/"}>My Toys</Link>
-                            <Link to={"/"}>Add Toys</Link>
-                            <Link to={"/"}>Blogs</Link>
+                            <Link to={"/mytoys"}>My Toys</Link>
+                            <Link to={"/addtoys"}>Add Toys</Link>
+                            <Link to={"/blogs"}>Blogs</Link>
                         </ul>
                     </div>
                     <div className="flex items-center">
@@ -36,11 +36,11 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex ">
                     <ul className="menu menu-horizontal px-1 ">
                         <Link className="mr-4 p-3 font-bold text-white hover:underline" to={"/"}>Home</Link>
-                        <Link className="mr-4 p-3 font-bold text-white hover:underline" to={"/"} tabIndex={0}> All Toys
+                        <Link className="mr-4 p-3 font-bold text-white hover:underline" to={"/alltoys"} tabIndex={0}> All Toys
                         </Link>
-                        <Link className="mr-4 p-3 font-bold text-white hover:underline" to={"/"}>My Toys</Link>
-                        <Link className="mr-4 p-3 font-bold text-white hover:underline" to={"/"}>Add Toys</Link>
-                        <Link className="mr- p-3 font-bold text-white hover:underline" to={"/"}>Blogs</Link>
+                        <Link className="mr-4 p-3 font-bold text-white hover:underline" to={"/mytoys"}>My Toys</Link>
+                        <Link className="mr-4 p-3 font-bold text-white hover:underline" to={"/addtoys"}>Add Toys</Link>
+                        <Link className="mr- p-3 font-bold text-white hover:underline" to={"/blogs"}>Blogs</Link>
                     </ul>
                 </div>
                 <div className="navbar-end">
