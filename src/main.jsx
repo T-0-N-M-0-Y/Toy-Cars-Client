@@ -10,6 +10,9 @@ import Home from './Components/Home.jsx';
 import Login from './Components/Authentication/Login.jsx';
 import Signup from './Components/Authentication/Signup.jsx';
 import AuthProvider from './Components/AuthProviders/AuthProvider.jsx';
+import MyToys from './Components/ToyCollection/MyToys.jsx';
+import AddToys from './Components/ToyCollection/AddToys.jsx';
+import Blogs from './Components/Blogs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +30,18 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <Signup></Signup>
+      },
+      {
+        path: "/mytoys",
+        element: <MyToys></MyToys>
+      },
+      {
+        path: "/addtoys",
+        element: <AddToys></AddToys>
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>
       }
     ]
   },
