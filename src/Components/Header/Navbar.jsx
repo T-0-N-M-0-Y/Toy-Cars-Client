@@ -1,9 +1,20 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProviders/AuthProvider";
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user);
+
+    const handleSignOut = () => {
+        logOut()
+    }
+
+
     return (
         <div>
-            <div className="navbar p-3">
+            <div className="navbar p-3 bg-sky-800">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -23,20 +34,28 @@ const Navbar = () => {
                         <h1 className="ml-2 text-3xl font-bold text-red-600">Toy <span className="text-yellow-400">Cars</span></h1>
                     </div>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        <Link className="mr-4 p-3 font-bold text-sky-800 hover:underline" to={"/"}>Home</Link>
-                        <Link className="mr-4 p-3 font-bold text-sky-800 hover:underline" to={"/"} tabIndex={0}> All Toys
+                <div className="navbar-center hidden lg:flex ">
+                    <ul className="menu menu-horizontal px-1 ">
+                        <Link className="mr-4 p-3 font-bold text-white hover:underline" to={"/"}>Home</Link>
+                        <Link className="mr-4 p-3 font-bold text-white hover:underline" to={"/"} tabIndex={0}> All Toys
                         </Link>
-                        <Link className="mr-4 p-3 font-bold text-sky-800 hover:underline" to={"/"}>My Toys</Link>
-                        <Link className="mr-4 p-3 font-bold text-sky-800 hover:underline" to={"/"}>Add Toys</Link>
-                        <Link className="mr- p-3 font-bold text-sky-800 hover:underline" to={"/"}>Blogs</Link>
+                        <Link className="mr-4 p-3 font-bold text-white hover:underline" to={"/"}>My Toys</Link>
+                        <Link className="mr-4 p-3 font-bold text-white hover:underline" to={"/"}>Add Toys</Link>
+                        <Link className="mr- p-3 font-bold text-white hover:underline" to={"/"}>Blogs</Link>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="mr-4 bg-yellow-400 p-3 font-bold text-white rounded-lg hover:bg-red-500" to={"/login"}> <button>Login</button></Link>
-                    <Link className="mr-4 bg-red-600 p-3 font-bold text-white rounded-lg hover:bg-yellow-400" to={"/signup"}> <button>Sign Up</button></Link>
-                    <img className="h-14 w-14" src="https://w7.pngwing.com/pngs/700/802/png-transparent-hot-wheels-model-car-die-cast-toy-hot-wheels-logo-car-smiley.png"/>
+                    {
+                        user ? <Link className="mr-4 bg-yellow-400 p-3 font-bold text-white rounded-lg hover:bg-red-500" to={"/login"}> <button onClick={handleSignOut}>Log out</button></Link>
+                            :
+                            <Link className="mr-4 bg-yellow-400 p-3 font-bold text-white rounded-lg hover:bg-red-500" to={"/login"}> <button>Login</button></Link>
+                    }
+
+                    {
+                        user ? <img className="h-14 w-14" src={user.photoURL} />
+                            :
+                            <Link className="mr-4 bg-red-600 p-3 font-bold text-white rounded-lg hover:bg-yellow-400" to={"/signup"}> <button>Sign Up</button></Link>
+                    }
                 </div>
             </div>
         </div>
