@@ -45,9 +45,9 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {
-                        user ? <Link className="mr-2 lg:mr-4 bg-yellow-400 p-2 lg:p-3 font-bold text-white rounded-lg hover:bg-red-500"> <button onClick={handleSignOut}>Log out</button></Link>
+                        user ? <Link className="mr-2 lg:mr-4 bg-sky-800 p-2 lg:p-3 font-bold text-white rounded-lg hover:bg-red-600"> <button onClick={handleSignOut}>Log out</button></Link>
                             :
-                            <Link className="mr-2 lg:mr-4 bg-yellow-400 p-2 lg:p-3 font-bold text-white rounded-lg hover:bg-red-500" to={"/login"}> <button>Login</button></Link>
+                            <Link className="mr-2 lg:mr-4 bg-sky-800 p-2 lg:p-3 font-bold text-white rounded-lg hover:bg-yellow-500" to={"/login"}> <button>Login</button></Link>
                     }
 
                     {
@@ -55,7 +55,7 @@ const Navbar = () => {
                             <img className="w-10 h-10 lg:h-14 lg:w-14 rounded-full" src={user.photoURL} referrerPolicy="no-referrer" />
                         </div>
                             :
-                            <Link className="lg:mr-4 bg-red-600 p-2 lg:p-3 font-bold text-white rounded-lg hover:bg-yellow-400" to={"/signup"}> <button>Sign Up</button></Link>
+                            <Link className="lg:mr-4 bg-sky-800 p-2 lg:p-3 font-bold text-white rounded-lg hover:bg-red-600" to={"/signup"}> <button>Sign Up</button></Link>
                     }
                 </div>
             </div>

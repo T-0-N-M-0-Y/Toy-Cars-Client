@@ -71,7 +71,7 @@ const Signup = () => {
                                     <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" />
                                 </div>
                                 <div className="form-control mt-6">
-                                    <input className="text-center text-sky-800 bg-yellow-400 p-3 font-bold rounded-lg hover:bg-red-500" type="submit" value="Sign Up" />
+                                    <input className="text-center text-white bg-red-600 p-3 font-bold rounded-lg hover:bg-yellow-500" type="submit" value="Sign Up" />
                                 </div>
                                 <Link to={"/login"}>Already have an Account? <span className="text-red-600 hover:underline">Click here</span> </Link>
                             </div>

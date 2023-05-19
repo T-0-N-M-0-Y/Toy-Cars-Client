@@ -67,7 +67,7 @@ const Login = () => {
                                     </label>
                                 </div>
                                 <div className="form-control mt-6">
-                                    <input className="text-center text-sky-800 bg-yellow-400 p-3 font-bold rounded-lg hover:bg-red-500" type="submit" value="Login" />
+                                    <input className="text-center text-white bg-red-600 p-3 font-bold rounded-lg hover:bg-yellow-500" type="submit" value="Login" />
                                 </div>
                                 <Link to={"/signup"}>No Account? <span className="text-red-600 hover:underline">Click here</span> or</Link>
                                 <div className="flex justify-between items-center">
