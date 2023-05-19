@@ -1,10 +1,5 @@
 .font-link {
-    /* font-family: 'Crimson Text', serif; */
-    /* font-family: 'EB Garamond', serif; */
     font-family: 'Handlee', cursive;
-    /* font-family: 'Inconsolata', monospace; */
-    /* font-family: 'Montserrat', sans-serif; */
-    /* font-family: 'Poppins', sans-serif; */
 }
 
 @tailwind base;
