@@ -9,8 +9,8 @@ const Banner = () => {
                     <div className="absolute flex justify-between items-center transform -translate-y-1/2 left-1 right-1 top-1/2">
                         <a href="#slide4" className="btn btn-circle bg-sky-800 hover:bg-sky-500 text-white border-none">❮</a>
                         <div className="bg-gradient-to-r from-black p-10">
-                            <p className="text-white font-bold text-8xl">Pick The Best Toy</p> <br />
-                            <p className="text-white font-bold text-2xl">We offer Premium Services!!!</p> <br />
+                            <p className="text-white font-bold text-8xl">Pick The Best Toy for your kids</p> <br />
+                            <p className="text-white font-bold text-2xl">Your Happiness Our Priority!!!</p> <br />
                             <Link className="bg-red-600 p-2 lg:p-3 font-bold text-white rounded-lg hover:bg-yellow-500" to={"/alltoys"}> <button>Discover</button></Link>
                         </div>
                         <a href="#slide2" className="btn btn-circle bg-sky-800 hover:bg-sky-500 text-white border-none">❯</a>
