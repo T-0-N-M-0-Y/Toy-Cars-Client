@@ -1,5 +1,5 @@
 import { FaStar } from "react-icons/fa";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 const AllToysDetails = () => {
 
@@ -20,7 +20,6 @@ const AllToysDetails = () => {
                     <p>Price: ${price}</p>
                     <p className="flex items-center">Rating: {rating}<FaStar className="ml-2"></FaStar></p>
                     <div className="card-actions justify-start">
-                    <Link className="bg-red-600 p-2 lg:p-3 font-bold text-white rounded-lg hover:bg-yellow-500" to={"/alltoys"}> <button>See More</button></Link>
                     </div>
                 </div>
             </div>

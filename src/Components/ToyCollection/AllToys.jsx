@@ -6,7 +6,7 @@ const AllToys = () => {
     const toys = useLoaderData();
 
     return (
-        <div>
+        <div className="px-20">
             <h1 className='text-4xl font-bold text-center my-10'>See Our Massive Collection</h1>
 
             <div className="overflow-x-auto w-full my-10">

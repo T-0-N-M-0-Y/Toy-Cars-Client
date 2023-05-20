@@ -14,7 +14,7 @@ const MyToys = () => {
     }, [])
 
     return (
-        <div>
+        <div className="px-20">
             <h1 className='text-4xl font-bold text-center mt-10'>My Collections</h1>
 
             <div className="overflow-x-auto w-full my-10">

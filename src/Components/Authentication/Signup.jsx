@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProviders/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import Swal from "sweetalert2";
 
 const Signup = () => {
 
@@ -19,7 +20,15 @@ const Signup = () => {
         submitUser(email, password)
             .then(result => {
                 const userDataFound = result.user;
-                console.log(userDataFound);
+                if (userDataFound) {
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'success',
+                        title: 'Sign up Complete',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
                 event.target.reset();
                 dataUpdate(result.user, name, photo);
                 window.location.reload()

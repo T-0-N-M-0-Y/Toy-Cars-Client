@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProviders/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddToys = () => {
 
@@ -27,11 +28,23 @@ const AddToys = () => {
             body: JSON.stringify(addToy)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'success',
+                        title: 'Toy Added',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+
+            })
             .catch(error => console.log(error))
     }
 
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     return (
         <div className="bg-slate-200 p-24">
