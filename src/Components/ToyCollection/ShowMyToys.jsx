@@ -7,7 +7,6 @@ const ShowMyToys = ({ myToy }) => {
     const { _id, name, toyname, subcatagory, price, rating, quantity } = myToy;
 
     const handleDeleteToy = _id => {
-        console.log(_id);
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",

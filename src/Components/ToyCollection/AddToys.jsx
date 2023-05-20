@@ -122,7 +122,7 @@ const AddToys = () => {
                         </label>
                     </div>
                 </div>
-                <textarea className="textarea textarea-bordered lg:w-full my-5" name="details" placeholder="Detail description"></textarea>
+                <textarea className="textarea textarea-bordered lg:w-full my-5" name="details" placeholder="Detailed Description"></textarea>
 
                 <div className="form-control">
                     <input className="text-center text-white bg-red-600 p-3 font-bold rounded-lg hover:bg-yellow-500" type="submit" value="Add" />
