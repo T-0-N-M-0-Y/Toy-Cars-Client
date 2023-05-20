@@ -11,7 +11,6 @@ const AllToys = () => {
 
             <div className="overflow-x-auto w-full my-10">
                 <table className="table w-full">
-                    {/* head */}
                     <thead>
                         <tr>
                             <th>Seller:</th>

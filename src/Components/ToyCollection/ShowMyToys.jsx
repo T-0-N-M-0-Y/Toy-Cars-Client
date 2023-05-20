@@ -1,8 +1,9 @@
+import { FaEdit,  FaInfo,  FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const ShowAllToys = ({ toy }) => {
+const ShowMyToys = ({ myToy }) => {
 
-    const { _id, name, toyname, subcatagory, price, rating, quantity } = toy;
+    const { _id, name, toyname, subcatagory, price, rating, quantity } = myToy;
 
     return (
         <tr>
@@ -22,11 +23,17 @@ const ShowAllToys = ({ toy }) => {
             <td>{quantity}</td>
             <th>
                 <Link to={`/alltoydetails/${_id}`}>
-                    <button className="btn btn-ghost btn-xs">Details</button>
+                    <button className="btn btn-success btn-xs"><FaInfo></FaInfo></button>
+                </Link> <br />
+                <Link>
+                    <button className="btn btn-primary btn-xs my-1"> <FaEdit></FaEdit></button>
+                </Link> <br />
+                <Link>
+                    <button className="btn btn-error btn-xs"><FaTrash></FaTrash></button>
                 </Link>
             </th>
         </tr>
     );
 };
 
-export default ShowAllToys;
+export default ShowMyToys;

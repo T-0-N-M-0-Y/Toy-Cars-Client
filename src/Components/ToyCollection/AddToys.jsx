@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { AuthContext } from "../AuthProviders/AuthProvider";
 
 const AddToys = () => {
 
@@ -7,12 +9,13 @@ const AddToys = () => {
         const name = form.name.value;
         const toyname = form.toyname.value;
         const pictureURL = form.pictureURL.value;
-        const email = form.email.value;
+        const email = user?.email;
         const subcatagory = form.subcatagory.value;
         const price = form.price.value;
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const details = form.details.value;
+        event.target.reset();
 
         const addToy = { name, toyname, pictureURL, email, subcatagory, price, rating, quantity, details }
 
@@ -25,7 +28,10 @@ const AddToys = () => {
         })
             .then(res => res.json())
             .then(data => console.log(data))
+            .catch(error => console.log(error))
     }
+
+    const {user} = useContext(AuthContext);
 
     return (
         <div className="bg-slate-200 p-24">
@@ -37,7 +43,7 @@ const AddToys = () => {
                             <span className="label-text">Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="name" placeholder="Name" className="input input-bordered lg:w-full mr-5" />
+                            <input type="text" name="name" defaultValue={user?.displayName} placeholder="Name" className="input input-bordered lg:w-full mr-5" />
                         </label>
                     </div>
                     <div className="form-control lg:w-1/2">
@@ -63,7 +69,7 @@ const AddToys = () => {
                             <span className="label-text">Email</span>
                         </label>
                         <label className="input-group">
-                            <input type="email" name="email" placeholder="Email" className="input input-bordered lg:w-full" />
+                            <input type="email" name="email" defaultValue={user?.email} placeholder="Email" className="input input-bordered lg:w-full" />
                         </label>
                     </div>
                 </div>

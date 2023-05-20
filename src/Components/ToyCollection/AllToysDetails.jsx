@@ -4,7 +4,6 @@ import { Link, useLoaderData } from "react-router-dom";
 const AllToysDetails = () => {
 
     const toyDetails = useLoaderData()
-    console.log(toyDetails);
 
     const { pictureURL, toyname, name, email, price, rating, quantity, details } = toyDetails;
 
@@ -18,7 +17,7 @@ const AllToysDetails = () => {
                     <p>Seller name: {name}</p>
                     <p>Email: {email}</p>
                     <p>Available Quantitiy: {quantity}</p>
-                    <p>Price: {price}</p>
+                    <p>Price: ${price}</p>
                     <p className="flex items-center">Rating: {rating}<FaStar className="ml-2"></FaStar></p>
                     <div className="card-actions justify-start">
                     <Link className="bg-red-600 p-2 lg:p-3 font-bold text-white rounded-lg hover:bg-yellow-500" to={"/alltoys"}> <button>See More</button></Link>
