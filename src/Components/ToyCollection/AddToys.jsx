@@ -16,8 +16,6 @@ const AddToys = () => {
 
         const addToy = { name, toyname, pictureURL, email, subcatagory, price, rating, quantity, details }
 
-        console.log(addToy);
-
         fetch("http://localhost:5000/newtoy", {
             method: 'POST',
             headers: {
