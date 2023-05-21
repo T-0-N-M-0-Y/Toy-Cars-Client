@@ -1,7 +1,10 @@
 import { FaStar } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
+import UseTitle from "../UseTitle";
 
 const AllToysDetails = () => {
+
+    UseTitle("Toy Details")
 
     const toyDetails = useLoaderData()
 

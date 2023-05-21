@@ -6,7 +6,7 @@ const Galary = () => {
     const [allData, setAllData] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/alldata")
+        fetch("https://assignment-11-car-toy-market-server.vercel.app/alldata")
             .then(res => res.json())
             .then(data => setAllData(data))
     }, [])

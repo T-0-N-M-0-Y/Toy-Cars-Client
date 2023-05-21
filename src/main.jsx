@@ -17,11 +17,13 @@ import AllToys from './Components/ToyCollection/AllToys.jsx';
 import PrivateRoutes from './Components/PrivateRoutes/PrivateRoutes.jsx';
 import AllToysDetails from './Components/ToyCollection/AllToysDetails.jsx';
 import UpdateToy from './Components/ToyCollection/UpdateToy.jsx';
+import Error from './Components/Authentication/Error.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -38,12 +40,12 @@ const router = createBrowserRouter([
       {
         path: "/alltoys",
         element: <AllToys></AllToys>,
-        loader: () => fetch("http://localhost:5000/newtoy")
+        loader: () => fetch("https://assignment-11-car-toy-market-server.vercel.app/newtoy")
       },
       {
         path: "/alltoydetails/:id",
         element: <PrivateRoutes><AllToysDetails></AllToysDetails></PrivateRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/newtoy/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-11-car-toy-market-server.vercel.app/newtoy/${params.id}`)
       },
       {
         path: "/mytoys",
@@ -60,7 +62,7 @@ const router = createBrowserRouter([
       {
         path: "/updatetoy/:id",
         element: <PrivateRoutes><UpdateToy></UpdateToy></PrivateRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/newtoy/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-11-car-toy-market-server.vercel.app/newtoy/${params.id}`)
       },
     ]
   },

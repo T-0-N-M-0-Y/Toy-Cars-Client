@@ -17,6 +17,7 @@ const ReactTabs = () => {
                     <Tabs>
                         <TabList>
                             <Tab>Sports Cars</Tab>
+                            <Tab>Sports Cars</Tab>
                         </TabList>
 
                         <TabPanel>
@@ -28,6 +29,7 @@ const ReactTabs = () => {
                 <TabPanel>
                     <Tabs>
                         <TabList>
+                            <Tab>Regular Cars</Tab>
                             <Tab>Regular Cars</Tab>
                         </TabList>
 

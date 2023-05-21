@@ -3,8 +3,11 @@ import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from "../AuthProviders/AuthProvider";
 import { useContext } from "react";
 import { GoogleAuthProvider } from "firebase/auth";
+import UseTitle from "../UseTitle";
 
 const Login = () => {
+
+    UseTitle("Login")
 
     const { logIn, logInWithGoogle } = useContext(AuthContext);
 
@@ -54,14 +57,14 @@ const Login = () => {
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="email" name="email" placeholder="Email" className="input input-bordered" />
+                                    <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
                                     <input type="password"
-                                        name="password" placeholder="Password" className="input input-bordered" />
+                                        name="password" placeholder="Password" className="input input-bordered" required/>
                                     <label className="label">
                                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                     </label>

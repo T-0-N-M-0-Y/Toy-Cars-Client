@@ -2,7 +2,7 @@ import { FaEdit, FaInfo, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const ShowMyToys = ({ myToy }) => {
+const ShowMyToys = ({ myToy, myToys, setMyToys }) => {
 
     const { _id, name, toyname, subcatagory, price, rating, quantity } = myToy;
 
@@ -18,7 +18,7 @@ const ShowMyToys = ({ myToy }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/newtoy/${_id}`, {
+                fetch(`https://assignment-11-car-toy-market-server.vercel.app/newtoy/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
@@ -28,6 +28,8 @@ const ShowMyToys = ({ myToy }) => {
                                 'Deleted!',
                                 'Your Toy has been deleted.',
                                 'success')
+                                const remainingToys = myToys.filter(toys => toys._id !== _id);
+                                setMyToys(remainingToys);
                         }
                     })
                     .catch(error => console.log(error))
