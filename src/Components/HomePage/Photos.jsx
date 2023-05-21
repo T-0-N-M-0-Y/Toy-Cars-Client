@@ -1,6 +1,5 @@
 const Photos = ({ data }) => {
 
-    console.log(data);
     const { picture } = data;
 
     return (
