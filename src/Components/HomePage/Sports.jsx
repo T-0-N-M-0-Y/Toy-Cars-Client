@@ -7,7 +7,8 @@ const Sports = ({ catagoryToy }) => {
 
     return (
         <div>
-            <div className="card card-compact w-full h-96  bg-base-100 shadow-xl">
+            <div className="card card-compact w-full h-96  bg-base-100 shadow-xl" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
                 <figure><img src={pictureURL} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{toyname}</h2>

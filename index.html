@@ -12,11 +12,24 @@
     href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=EB+Garamond:wght@500&family=Handlee&family=Inconsolata&family=Montserrat&family=Poppins:wght@400;500&display=swap"
     rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  </script>
 </body>
 
 </html>
