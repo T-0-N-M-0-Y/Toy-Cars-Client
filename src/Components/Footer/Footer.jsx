@@ -29,6 +29,7 @@ const Footer = () => {
                     <img className="w-0 h-0 lg:h-16 lg:w-16 rounded-full" src="https://w7.pngwing.com/pngs/700/802/png-transparent-hot-wheels-model-car-die-cast-toy-hot-wheels-logo-car-smiley.png" alt="" />
                     <p>TOY CARS Ltd. <br />Providing Services since 1992</p>
                 </div>
+                <p className="flex items-center">Copyright © 2023 - All right reserved by TOY CARS Ltd.</p>
                 <div className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">
                         <Link><FaFacebook></FaFacebook></Link>
