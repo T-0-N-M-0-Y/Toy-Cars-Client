@@ -44,7 +44,7 @@ const ReactTabs = () => {
                         <TabPanel>
                             <div className="grid md:grid-cols-3 gap-5">
                                 {
-                                    catagoryToys && catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
+                                    catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
                                 }
                             </div>
                         </TabPanel>
@@ -52,7 +52,7 @@ const ReactTabs = () => {
                         <TabPanel>
                             <div className="grid md:grid-cols-3 gap-5">
                                 {
-                                    catagoryToys && catagoryToys.map(catagoryToy => <Classic key={catagoryToy._id} catagoryToy={catagoryToy}></Classic>)
+                                    catagoryToys.map(catagoryToy => <Classic key={catagoryToy._id} catagoryToy={catagoryToy}></Classic>)
                                 }
                             </div>
                         </TabPanel>
@@ -69,7 +69,7 @@ const ReactTabs = () => {
                         <TabPanel>
                             <div className="grid md:grid-cols-3 gap-5">
                                 {
-                                    catagoryToys && catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
+                                    catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
                                 }
                             </div>
                         </TabPanel>
@@ -77,7 +77,7 @@ const ReactTabs = () => {
                         <TabPanel>
                             <div className="grid md:grid-cols-3 gap-5">
                                 {
-                                    catagoryToys && catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
+                                    catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
                                 }
                             </div>
                         </TabPanel>
@@ -94,14 +94,14 @@ const ReactTabs = () => {
                         <TabPanel>
                             <div className="grid grid-cols-3 gap-5">
                                 {
-                                    catagoryToys && catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
+                                    catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
                                 }
                             </div>
                         </TabPanel>
                         <TabPanel>
                             <div className="grid grid-cols-3 gap-5">
                                 {
-                                    catagoryToys && catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
+                                    catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
                                 }
                             </div>
                         </TabPanel>

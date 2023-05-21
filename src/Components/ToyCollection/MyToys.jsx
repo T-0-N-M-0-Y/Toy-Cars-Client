@@ -18,7 +18,7 @@ const MyToys = () => {
             .then(data => setMyToys(data))
     }, [])
 
-    const handleSortOrderChange = () => {
+    const handleSortOrder = () => {
         const newSortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
         setSortOrder(newSortOrder);
     };
@@ -34,7 +34,7 @@ const MyToys = () => {
     return (
         <div className="px-24 pb-10">
             <h1 className='text-4xl font-bold text-center mt-10'>My Collections</h1>
-            <button onClick={handleSortOrderChange} className="btn btn-outline btn-accent">{sortOrder === 'asc' ? 'Sort Descending' : 'Sort Ascending'}</button>
+            <button onClick={handleSortOrder} className="btn btn-outline btn-accent">{sortOrder === 'asc' ? 'Sort Descending' : 'Sort Ascending'}</button>
 
             <div className="overflow-x-auto w-full my-10">
                 <table className="table w-full">
