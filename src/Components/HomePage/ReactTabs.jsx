@@ -26,7 +26,7 @@ const ReactTabs = () => {
 
 
     return (
-        <div className='px-20 py-10'>
+        <div className='md:px-20 px-5 py-10'>
             <Tabs>
                 <TabList>
                     <Tab>S+ Cars</Tab>
@@ -42,7 +42,7 @@ const ReactTabs = () => {
                         </TabList>
 
                         <TabPanel>
-                            <div className="grid grid-cols-3 gap-5">
+                            <div className="grid md:grid-cols-3 gap-5">
                                 {
                                     catagoryToys && catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
                                 }
@@ -50,7 +50,7 @@ const ReactTabs = () => {
                         </TabPanel>
 
                         <TabPanel>
-                            <div className="grid grid-cols-3 gap-5">
+                            <div className="grid md:grid-cols-3 gap-5">
                                 {
                                     catagoryToys && catagoryToys.map(catagoryToy => <Classic key={catagoryToy._id} catagoryToy={catagoryToy}></Classic>)
                                 }
@@ -67,7 +67,7 @@ const ReactTabs = () => {
                         </TabList>
 
                         <TabPanel>
-                            <div className="grid grid-cols-3 gap-5">
+                            <div className="grid md:grid-cols-3 gap-5">
                                 {
                                     catagoryToys && catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
                                 }
@@ -75,7 +75,7 @@ const ReactTabs = () => {
                         </TabPanel>
 
                         <TabPanel>
-                            <div className="grid grid-cols-3 gap-5">
+                            <div className="grid md:grid-cols-3 gap-5">
                                 {
                                     catagoryToys && catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
                                 }

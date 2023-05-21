@@ -7,8 +7,10 @@ const MyToys = () => {
 
     UseTitle("My Toys")
 
-    const [myToys, setMyToys] = useState([]);
     const { user } = useContext(AuthContext);
+
+    const [myToys, setMyToys] = useState([]);
+    const [sortOrder, setSortOrder] = useState('asc');
 
     useEffect(() => {
         fetch(`https://assignment-11-car-toy-market-server.vercel.app/newtoy?email=${user.email}`)
@@ -16,9 +18,23 @@ const MyToys = () => {
             .then(data => setMyToys(data))
     }, [])
 
+    const handleSortOrderChange = () => {
+        const newSortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
+        setSortOrder(newSortOrder);
+    };
+
+    const sortedToys = myToys.sort((a, b) => {
+        if (sortOrder === 'asc') {
+            return a.price - b.price;
+        } else {
+            return b.price - a.price;
+        }
+    });
+
     return (
         <div className="px-24 pb-10">
             <h1 className='text-4xl font-bold text-center mt-10'>My Collections</h1>
+            <button onClick={handleSortOrderChange} className="btn btn-outline btn-accent">{sortOrder === 'asc' ? 'Sort Descending' : 'Sort Ascending'}</button>
 
             <div className="overflow-x-auto w-full my-10">
                 <table className="table w-full">
@@ -35,7 +51,7 @@ const MyToys = () => {
                     </thead>
                     <tbody>
                         {
-                            myToys.map(myToy => <ShowMyToys key={myToy._id} myToy={myToy} myToys={myToys} setMyToys={setMyToys}></ShowMyToys>)
+                            sortedToys.map(myToy => <ShowMyToys key={myToy._id} myToy={myToy} myToys={myToys} setMyToys={setMyToys}></ShowMyToys>)
                         }
                     </tbody>
                 </table>
