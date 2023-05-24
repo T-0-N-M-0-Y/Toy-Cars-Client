@@ -16,7 +16,7 @@ const MyToys = () => {
         fetch(`https://assignment-11-car-toy-market-server.vercel.app/newtoy?email=${user.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
-    }, [])
+    }, [user.email])
 
     const handleSortOrder = () => {
         const newSortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
