@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import Sports from './Sports';
-import Classic from './Classic';
+import CategoryToys from './CategoryToys';
 
 const ReactTabs = () => {
 
@@ -16,14 +15,12 @@ const ReactTabs = () => {
             .catch(error => console.log(error))
     }, [])
 
-
-    const filterCatagory = (catagoryName) => {
-        const selectedCatagory = catagoryToys.filter((catagory) => {
-            return catagory.subcatagory === catagoryName;
-        });
-        setCatagoryToys(selectedCatagory);
-    }
-
+    const sports = catagoryToys.filter(catagory => catagory.subcatagory === 'Sports');
+    const classic = catagoryToys.filter(catagory => catagory.subcatagory === 'Classic');
+    const regular = catagoryToys.filter(catagory => catagory.subcatagory === 'Normal car');
+    const fireTruck = catagoryToys.filter(catagory => catagory.subcatagory === 'Fire Truck');
+    const truck = catagoryToys.filter(catagory => catagory.subcatagory === 'Truck');
+    const zip = catagoryToys.filter(catagory => catagory.subcatagory === 'Big Zip');
 
     return (
         <div className='md:px-20 px-5 py-10'>
@@ -37,14 +34,14 @@ const ReactTabs = () => {
                 <TabPanel>
                     <Tabs>
                         <TabList>
-                            <Tab onClick={() => filterCatagory('Sports')}>Sports Cars</Tab>
-                            <Tab onClick={() => filterCatagory('Classic')}>Classic</Tab>
+                            <Tab>Sports Cars</Tab>
+                            <Tab>Classic</Tab>
                         </TabList>
 
                         <TabPanel>
                             <div className="grid md:grid-cols-3 gap-5">
                                 {
-                                    catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
+                                    sports.map(catagoryToy => <CategoryToys key={catagoryToy._id} catagoryToy={catagoryToy}></CategoryToys>)
                                 }
                             </div>
                         </TabPanel>
@@ -52,7 +49,7 @@ const ReactTabs = () => {
                         <TabPanel>
                             <div className="grid md:grid-cols-3 gap-5">
                                 {
-                                    catagoryToys.map(catagoryToy => <Classic key={catagoryToy._id} catagoryToy={catagoryToy}></Classic>)
+                                    classic.map(catagoryToy => <CategoryToys key={catagoryToy._id} catagoryToy={catagoryToy}></CategoryToys>)
                                 }
                             </div>
                         </TabPanel>
@@ -62,14 +59,14 @@ const ReactTabs = () => {
                 <TabPanel>
                     <Tabs>
                         <TabList>
-                            <Tab onClick={() => filterCatagory('Normal car')}>Regular Cars</Tab>
-                            <Tab onClick={() => filterCatagory('Big Zip')}>Big Zip</Tab>
+                            <Tab>Regular Cars</Tab>
+                            <Tab>Big Zip</Tab>
                         </TabList>
 
                         <TabPanel>
                             <div className="grid md:grid-cols-3 gap-5">
                                 {
-                                    catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
+                                    regular.map(catagoryToy => <CategoryToys key={catagoryToy._id} catagoryToy={catagoryToy}></CategoryToys>)
                                 }
                             </div>
                         </TabPanel>
@@ -77,7 +74,7 @@ const ReactTabs = () => {
                         <TabPanel>
                             <div className="grid md:grid-cols-3 gap-5">
                                 {
-                                    catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
+                                    zip.map(catagoryToy => <CategoryToys key={catagoryToy._id} catagoryToy={catagoryToy}></CategoryToys>)
                                 }
                             </div>
                         </TabPanel>
@@ -87,21 +84,21 @@ const ReactTabs = () => {
                 <TabPanel>
                     <Tabs>
                         <TabList>
-                            <Tab onClick={() => filterCatagory('Truck')}>Mini Trucks</Tab>
-                            <Tab onClick={() => filterCatagory('Fire Truck')}>Fire Trucks</Tab>
+                            <Tab>Mini Trucks</Tab>
+                            <Tab>Fire Trucks</Tab>
                         </TabList>
 
                         <TabPanel>
                             <div className="grid grid-cols-3 gap-5">
                                 {
-                                    catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
+                                    truck.map(catagoryToy => <CategoryToys key={catagoryToy._id} catagoryToy={catagoryToy}></CategoryToys>)
                                 }
                             </div>
                         </TabPanel>
                         <TabPanel>
                             <div className="grid grid-cols-3 gap-5">
                                 {
-                                    catagoryToys.map(catagoryToy => <Sports key={catagoryToy._id} catagoryToy={catagoryToy}></Sports>)
+                                    fireTruck.map(catagoryToy => <CategoryToys key={catagoryToy._id} catagoryToy={catagoryToy}></CategoryToys>)
                                 }
                             </div>
                         </TabPanel>
